@@ -1,39 +1,34 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { Router, Scene, Drawer } from 'react-native-router-flux';
+
+import Home from './screens/Home';
+import Screen1 from './screens/Screen1';
+import Screen2 from './screens/Screen2';
+import DrawerContent from './screens/DrawerContent';
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: ''
-    }
-  }
-
-  handleNameChange(text) {
-    this.setState({
-      name: text
-    })
-  }
-
   render() {
     return (
-      <View style={styles.container}>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        <TextInput 
-          placeholder = 'Type your name here'
-          onChangeText = {text => this.handleNameChange(text)}
-        />
-        <Text>Hello, {this.state.name}</Text>
-      </View>
+      <Router>
+        <Scene key='root' headerMode='none'>
+          <Drawer contentComponent={DrawerContent} drawerWidth={280}>
+            <Scene 
+              key='Home' 
+              component={Home}
+              initial
+            />
+            <Scene 
+              key='Screen1'
+              component={Screen1}
+            />
+            <Scene 
+              key='Screen2'
+              component={Screen2}
+            />
+          </Drawer>
+        </Scene>
+      </Router>
     );
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+}
