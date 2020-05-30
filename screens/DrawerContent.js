@@ -22,6 +22,11 @@ export default class DrawerContent extends Component {
                         <Text style={styles.option}>Multiplier</Text>
                     </View>
                 </TouchableNativeFeedback>
+                <TouchableNativeFeedback onPress={()=>Actions.Screen3()}>
+                    <View>
+                        <Text style={styles.option}>Image Pass</Text>
+                    </View>
+                </TouchableNativeFeedback>
             </View>
         )
     }

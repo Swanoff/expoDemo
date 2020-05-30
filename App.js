@@ -4,6 +4,7 @@ import { Router, Scene, Drawer } from 'react-native-router-flux';
 import Home from './screens/Home';
 import Screen1 from './screens/Screen1'; // Counter Screen
 import Screen2 from './screens/Screen2'; // Multiplier Screen
+import Screen3 from './screens/Screen3'; // Image addressing Screen
 import DrawerContent from './screens/DrawerContent';
 
 export default class App extends Component {
@@ -24,6 +25,10 @@ export default class App extends Component {
             <Scene 
               key='Screen2'
               component={Screen2}
+            />
+            <Scene 
+              key='Screen3'
+              component={Screen3}
             />
           </Drawer>
         </Scene>
