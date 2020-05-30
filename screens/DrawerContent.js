@@ -14,12 +14,12 @@ export default class DrawerContent extends Component {
                 </TouchableNativeFeedback>
                 <TouchableNativeFeedback onPress={()=>Actions.Screen1()}>
                     <View>
-                        <Text style={styles.option}>Screen 1</Text>
+                        <Text style={styles.option}>Counter</Text>
                     </View>
                 </TouchableNativeFeedback>
                 <TouchableNativeFeedback onPress={()=>Actions.Screen2()}>
                     <View>
-                        <Text style={styles.option}>Screen 2</Text>
+                        <Text style={styles.option}>Multiplier</Text>
                     </View>
                 </TouchableNativeFeedback>
             </View>

@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { Router, Scene, Drawer } from 'react-native-router-flux';
 
 import Home from './screens/Home';
-import Screen1 from './screens/Screen1';
-import Screen2 from './screens/Screen2';
+import Screen1 from './screens/Screen1'; // Counter Screen
+import Screen2 from './screens/Screen2'; // Multiplier Screen
 import DrawerContent from './screens/DrawerContent';
 
 export default class App extends Component {
